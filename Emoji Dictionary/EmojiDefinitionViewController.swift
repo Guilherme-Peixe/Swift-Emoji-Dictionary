@@ -10,7 +10,7 @@ import UIKit
 
 class EmojiDefinitionViewController: UIViewController {
     var emoji = ""
-    
+    //
     @IBOutlet weak var emojiDescription: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
     override func viewDidLoad() {
