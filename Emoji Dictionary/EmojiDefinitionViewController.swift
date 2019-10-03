@@ -9,22 +9,19 @@
 import UIKit
 
 class EmojiDefinitionViewController: UIViewController {
-    var emoji = ""
+    var emoji = Emoji()
     //
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var birthLabel: UILabel!
     @IBOutlet weak var emojiDescription: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        emojiLabel.text = emoji
+        emojiLabel.text = emoji.emoji
+        emojiDescription.text = emoji.emojiDescription
+        categoryLabel.text = emoji.emojiCategory
+        birthLabel.text = "Since: \(emoji.emojiRealease)"
         
-        if(emoji == "🥶"){
-            emojiDescription.text = "I'm cold bitch!"
-        } else if (emoji == "🤬"){
-            emojiDescription.text = "I hate you"
-        } else if (emoji == "🦇"){
-            emojiDescription.text = "Son of Batman"
-        } else {
-            emojiDescription.text = "Six days until my death"
-        }
+        
     }
 }
